@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Liste des Offres</title>
+</head>
+<body>
+    
+    <a href="/">Retour à l'accueil</a>
+   <h1> Liste des abonnements disponibles :</h1>
+   <ul> 
+    <% offres.forEach((offre) => { %>
+    <li><%= offre.titre %> - <%= offre.go %> Go</li>
+    <% }) %>
+   </ul>
+</body>
+</html>

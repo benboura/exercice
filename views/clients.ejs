@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Liste des Clients</title>
+</head>
+<body>
+    <h1>Liste des Clients</h1>
+    <a href="/">Retour à l'accueil</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Âge</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>Adresse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% clients.forEach(client => { %>
+                <tr>
+                    <td><%= client.id %></td>
+                    <td><%= client.nom %></td>
+                    <td><%= client.prenom %></td>
+                    <td><%= client.age %></td>
+                    <td><%= client.telephone %></td>
+                    <td><%= client.email %></td>
+                    <td><%= client.adresse %></td>
+                    <td>
+                        <a href="/clients/edit/<%= client.id %>">Modifier</a>
+                        <a href="/clients/delete/<%= client.id %>" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/clients/add">Ajouter un nouveau client</a>
+</body>
+</html>
