@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/projet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souscrire à un Abonnement</title>
+</head>
+<body>
+    <center>
+    <h1>Souscrire à un Abonnement</h1>
+    <form action="/clients/subscribe" method="POST">
+        <input type="hidden" name="clientId" value="<%= clientId %>">
+        
+        <label for="abonnement">Choisir un abonnement :</label>
+        <select name="abonnementId" id="abonnement" required>
+            <% offres.forEach((offre) => { %>
+                <option value="<%= offre.id %>">
+                    <%= offre.titre %> - <%= offre.go %> Go
+                </option>
+            <% }) %>
+        </select><br>
+        
+        <button type="submit">Souscrire</button>
+    </form>
+    <a href="/clients">Retour à la liste des clients</a>
+    </center>
+</body>
+<%- include('footer.ejs') %>
+</html>
+

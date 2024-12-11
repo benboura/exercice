@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/projet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Compte Client</title>
+</head>
+<body>
+    <center>
+    <h1>Créer un Compte Client</h1>
+    <form action="/clients/add" method="POST">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" required><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom" id="prenom" required><br>
+
+        <label for="age">Âge :</label>
+        <input type="number" name="age" id="age" required><br>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="text" name="telephone" id="telephone" required><br>
+
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" required><br>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" name="adresse" id="adresse" required><br>
+
+        <button type="submit">Créer le Compte</button>
+    </form>
+    <a href="/clients">Retour à la liste des clients</a>
+    </center>
+</body>
+<%- include('footer.ejs') %>
+</html>

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    
     <title>Accueil - Plateforme Streaming</title>
 </head>
 <body>
@@ -16,32 +19,35 @@
 
     <main>
         <section>
+        <center>
             <h2>Aperçu des Offres</h2>
-            <p>Découvrez les abonnements disponibles :</p>
-            <ul>
-               
-            </ul>
             <a href="/offres">Voir toutes les offres</a>
+        </center>
         </section>
-
+   
         <section>
+        <center>
             <h2>Aperçu des Clients</h2>
-            <p>Liste des clients inscrits récemment :</p>
-            <ul>
-               
-            </ul>
             <a href="/clients">Voir tous les clients</a>
+        </center>
         </section>
 
         <section>
+        <center>
             <h2>L'Équipe Commerciale</h2>
-            <p>Rencontrez notre équipe :</p>
-            <ul>
-               
-            </ul>
             <a href="/equipe">Voir toute l'équipe</a>
+        </center>
         </section>
     </main>
+    <div class="carousel">
+        <img src="/images/image1.jpg" alt="Image 1">
+        <img src="/images/image2.jpg" alt="Image 2">
+        <img src="/images/image3.jpg" alt="Image 3">
+    </div>
+
 </body>
+
+<%- include('footer.ejs') %>
+
 </html>
 

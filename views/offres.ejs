@@ -5,13 +5,15 @@
     <title>Liste des Offres</title>
 </head>
 <body>
-    
-    <a href="/">Retour à l'accueil</a>
+<center>
    <h1> Liste des abonnements disponibles :</h1>
    <ul> 
     <% offres.forEach((offre) => { %>
     <li><%= offre.titre %> - <%= offre.go %> Go</li>
     <% }) %>
    </ul>
+   <a href="/">Retour à l'accueil</a>
+</center>
 </body>
+<%- include('footer.ejs') %>
 </html>

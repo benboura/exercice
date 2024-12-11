@@ -1,55 +1,154 @@
+/* ---------- Général ---------- */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('/images/image2.jpg') no-repeat center center fixed;
+    background-size: cover; /*l'image s'adapte à l'écran*/
     color: #333;
-    padding: 20px;
+    line-height: 1.6;
 }
 
-h1 {
-    color: #0056b3;
-}
-
-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #0056b3;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
+h1, h2, h3{
+    text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-table th, table td {
-    border: 1px solid #ddd;
+/* Encadrement des titres */
+h1 {
     padding: 10px;
-    text-align: left;
+    border: 3px solid #ff9800;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
-table th {
-    background-color: #f4f4f4;
+/* ---------- Header ---------- */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.team-container {
+header nav {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
-.team-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    width: calc(33% - 20px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.team-card h3 {
-    margin-top: 0;
+li, ul{
+    text-align: center;
+    color: #ff9800;
+} 
+
+header nav a:hover {
+    border: 2px solid #ff9800;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
+
+/* ---------- Table ---------- */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background: #ff9800;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+table tr:hover {
+    background: #ddd;
+}
+
+/* ---------- Boutons ---------- */
+button, a {
+    text-decoration: none;
+    background: #ff9800;
+    color: #f60101;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+    background: #e68900;
+}
+
+/* ---------- Section avec images défilantes ---------- */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img {
+    width: 100%;
+    max-height: 400px;
+    animation: slide 15s infinite;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {transform: translateX(0);}
+    25%{transform: translateX(-100%);}
+    50%{transform: translateX(-200%);}
+    75%{transform: translateX(-300%);}
+    100%{transform: translateX(0);}
+}
+
+/*----------footer-------*/
+
+footer{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px 0;
+    margin-top:30px; 
+    font-size: 14px;
+}
+
+footer a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+} 
+
