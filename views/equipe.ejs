@@ -5,21 +5,21 @@
     <title>Équipe Commerciale</title>
 </head>
 <body>
+    
     <h1>Équipe Commerciale</h1>
     <a href="/">Retour à l'accueil</a>
     <div class="team-container">
         <% equipe.forEach(membre => { %>
             <div class="team-card">
-                <h3><%= membre.prenom %> <%= membre.nom %></h3>
+                <p> Nom Prenom<%= membre.prenom %> <%= membre.nom %></p>
                 <p>Fonction : <%= membre.fonction %></p>
                 <p>Email : <%= membre.email %></p>
                 <p>Téléphone : <%= membre.telephone %></p>
-                <p>Immatriculation : <%= membre.immatriculation %></p>
-                <a href="/equipe/edit/<%= membre.id %>">Modifier</a>
-                <a href="/equipe/delete/<%= membre.id %>" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
+                
             </div>
         <% }) %>
     </div>
+   
 </body>
 <%- include('footer.ejs') %>
 </html>

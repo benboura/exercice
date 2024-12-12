@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projet.css">
+    <title>Modifier un Client</title>
+</head>
+<body>
+    <!-- Grand titre -->
+    <h1>Modifier un Client</h1>
+
+    <!-- Formulaire pour modifier un client -->
+    <form action="/clients/edit/<%= client.id %>" method="POST">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" value="<%= client.nom %>" required>
+        <br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" value="<%= client.prenom %>" required>
+        <br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" value="<%= client.email %>">
+        <br>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="text" id="telephone" name="telephone" value="<%= client.telephone %>">
+        <br>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" value="<%= client.adresse %>">
+        <br>
+
+        <button type="submit">Mettre à jour</button>
+    </form>
+
+    <!-- Lien pour revenir à la liste des clients -->
+    <a href="/clients">Retour à la liste des clients</a>
+</body>
+
+</html>
+

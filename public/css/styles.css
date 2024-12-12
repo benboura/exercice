@@ -1,104 +1,109 @@
 /* ---------- Général ---------- */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: url('/images/image2.jpg') no-repeat center center fixed;
-    background-size: cover; /*l'image s'adapte à l'écran*/
-    color: #333;
-    line-height: 1.6;
+    margin: 0; /* Supprime les marges par défaut de la page */
+    padding: 0; /* Supprime les espacements internes par défaut de la page */
+    font-family: 'Arial', sans-serif; /* Définit la police principale comme Arial ou une police sans-serif */
+    background: url('/images/image2.jpg') no-repeat center center fixed; /* Applique une image de fond centrée et fixe */
+    background-size: cover; /* L'image de fond s'adapte à la taille de l'écran */
+    color: #333; /* Définit la couleur principale du texte en gris foncé */
+    line-height: 1.6; /* Définit l'interligne à 1.6 pour une meilleure lisibilité */
 }
 
-h1, h2, h3{
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+p {
+    color: #ddd; /* Définit la couleur du texte des paragraphes en gris clair */
 }
 
-/* Encadrement des titres */
+h1, h2, h3 {
+    text-align: center; /* Centre les titres horizontalement */
+    margin-bottom: 20px; /* Ajoute une marge de 20px en bas des titres */
+    text-transform: uppercase; /* Convertit le texte des titres en majuscules */
+    font-weight: bold; /* Applique une police en gras */
+    letter-spacing: 1px; /* Ajoute un espacement d'1 pixel entre les lettres */
+    color: #fff; /* Définit la couleur des titres en blanc */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ajoute une ombre noire translucide pour donner du relief au texte */
+}
+
+/* ---------- Encadrement des titres ---------- */
 h1 {
-    padding: 10px;
-    border: 3px solid #ff9800;
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    padding: 10px; /* Ajoute un espacement interne de 10px autour du titre */
+    border: 3px solid #ff9800; /* Encadre le titre avec une bordure orange de 3px */
+    display: inline-block; /* Limite la largeur à celle du contenu et permet d'ajouter des styles comme padding/margin */
+    background: rgba(255, 255, 255, 0.1); /* Applique un fond blanc avec une transparence de 10% */
+    border-radius: 5px; /* Arrondit légèrement les coins du cadre */
 }
 
 /* ---------- Header ---------- */
 header {
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Applique un fond noir avec une transparence de 70% */
+    color: #fff; /* Définit la couleur du texte en blanc */
+    padding: 20px 0; /* Ajoute un espacement de 20px en haut et en bas */
+    text-align: center; /* Centre le contenu horizontalement */
 }
 
 header nav {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Utilise flexbox pour organiser les éléments enfants horizontalement */
+    justify-content: center; /* Centre les éléments du menu de navigation */
     gap: 20px;
 }
 
+/* ---------- Navigation dans le header ---------- */
 header nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
+    color: #fff; /* Définit la couleur du texte en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-size: 18px; /* Définit la taille de la police à 18px */
+    padding: 10px 15px; /* Ajoute des espacements internes de 10px en haut/bas et 15px à gauche/droite */
+    border: 2px solid transparent; /* Définit une bordure invisible au début */
+    transition: all 0.3s ease; /* Ajoute une transition fluide de 0.3 seconde pour les changements de style */
 }
 
-li, ul{
-    text-align: center;
-    color: #ff9800;
-} 
+li, ul {
+    color: #fff; /* Définit la couleur du texte dans les listes en blanc */
+}
 
 header nav a:hover {
-    border: 2px solid #ff9800;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    border: 2px solid #ff9800; /* Change la bordure en orange au survol */
+    background: rgba(255, 255, 255, 0.2); /* Ajoute un fond blanc semi-transparent au survol */
+    border-radius: 5px; /* Arrondit les coins de la bordure au survol */
 }
 
-/* ---------- Table ---------- */
+/* ---------- Style des tables ---------- */
 table {
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%; /* La table occupe 90% de la largeur de son conteneur */
+    margin: 20px auto; /* Centre la table horizontalement et ajoute une marge verticale de 20px */
+    border-collapse: collapse; /* Fusionne les bordures des cellules adjacentes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile autour de la table */
 }
 
 table th, table td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
+    padding: 10px; /* Ajoute un espacement interne de 10px dans les cellules */
+    text-align: center; /* Centre le contenu des cellules horizontalement */
+    border: 1px solid #ddd; /* Ajoute une bordure grise claire autour des cellules */
 }
 
 table th {
-    background: #ff9800;
-    color: #fff;
+    background: #ff9800; /* Ajoute un fond orange aux en-têtes de colonnes */
+    color: #fff; /* Définit la couleur du texte des en-têtes en blanc */
 }
 
 table tr:nth-child(even) {
-    background: #f2f2f2;
+    background: #f2f2f2; /* Applique un fond gris clair aux lignes paires pour alterner les couleurs */
 }
 
 table tr:hover {
-    background: #ddd;
+    background: #ddd; /* Change le fond de la ligne en gris clair au survol */
 }
+
 
 /* ---------- Boutons ---------- */
 button, a {
-    text-decoration: none;
-    background: #ff9800;
-    color: #f60101;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-decoration: none; /* Supprime le soulignement des liens ou du texte dans les boutons */
+    background: #ff9800; /* Définit la couleur de fond orange */
+    color: #f60101; /* Définit la couleur du texte en rouge */
+    padding: 10px 15px; /* Ajoute des marges internes de 10px en haut/bas et 15px à gauche/droite */
+    border: none; /* Supprime toute bordure par défaut */
+    border-radius: 5px; /* Arrondit les coins du bouton pour un style moderne */
+    cursor: pointer; /* Change le curseur en pointeur lorsqu'on survole le bouton, indiquant qu'il est cliquable */
+    transition: all 0.3s ease; /* Ajoute une transition fluide de 0.3 seconde pour les changements de style */
 }
 
 button:hover, a:hover {
@@ -107,45 +112,45 @@ button:hover, a:hover {
 
 /* ---------- Section avec images défilantes ---------- */
 .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 90%;
-    margin: 30px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Utilise un conteneur flex pour aligner les éléments enfants */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    overflow: hidden; /* Cache les parties des images qui débordent du conteneur */
+    width: 90%; /* Définit la largeur de la zone du carousel à 90% de l'espace disponible */
+    margin: 30px auto; /* Ajoute une marge de 30px en haut/bas et centre horizontalement */
+    border-radius: 10px; /* Arrondit les coins du carousel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour donner un effet de relief */
 }
 
 .carousel img {
-    width: 100%;
-    max-height: 400px;
-    animation: slide 15s infinite;
-    object-fit: cover;
+    width: 100%; /* Les images prennent toute la largeur du conteneur */
+    max-height: 400px; /* Définit une hauteur maximale pour les images */
+    animation: slide 15s infinite; /* Applique une animation appelée "slide" qui dure 15 secondes et se répète indéfiniment */
+    object-fit: cover; /* Coupe ou redimensionne les images pour remplir le conteneur sans déformation */
 }
 
+/* Animation keyframes pour faire défiler les images */
 @keyframes slide {
-    0% {transform: translateX(0);}
-    25%{transform: translateX(-100%);}
-    50%{transform: translateX(-200%);}
-    75%{transform: translateX(-300%);}
-    100%{transform: translateX(0);}
+    0% { transform: translateX(0); } /* L'image commence à sa position d'origine */
+    25% { transform: translateX(-100%); } /* L'image se déplace de 100% vers la gauche */
+    50% { transform: translateX(-200%); } /* L'image se déplace de 200% vers la gauche */
+    75% { transform: translateX(-300%); } /* L'image se déplace de 300% vers la gauche */
+    100% { transform: translateX(0); } /* Retourne à la position d'origine */
 }
 
-/*----------footer-------*/
-
-footer{
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 15px 0;
-    margin-top:30px; 
-    font-size: 14px;
+/* ---------- Footer ---------- */
+footer {
+    text-align: center; /* Centre le texte du footer */
+    background: rgba(0, 0, 0, 0.7); /* Ajoute un fond noir avec une transparence de 70% */
+    color: #fff; /* Définit la couleur du texte en blanc */
+    padding: 15px 0; /* Ajoute un espacement intérieur de 15px en haut et en bas */
+    margin-top: 30px; /* Ajoute un espacement de 30px au-dessus du footer */
+    font-size: 14px; /* Définit la taille du texte à 14 pixels */
 }
 
 footer a {
-    color: #ff9800;
-    text-decoration: none;
+    color: #ff9800; /* Définit la couleur des liens en orange */
+    text-decoration: none; /* Supprime le soulignement des liens */
 }
 
 footer a:hover {
